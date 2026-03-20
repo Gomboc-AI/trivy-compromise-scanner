@@ -4,6 +4,8 @@ A CLI tool to audit GitHub Actions workflow run logs for evidence of the **aquas
 
 It scans your repositories' workflow run logs within the compromise window, searching for any run that used a compromised action reference or commit SHA.
 
+![Demo](assets/demo.png)
+
 ---
 
 ## Installation
