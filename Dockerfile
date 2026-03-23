@@ -12,5 +12,6 @@ RUN CGO_ENABLED=0 go build -o trivy-compromise-scanner .
 
 # Stage 3: Minimal runtime
 FROM alpine:3.20 AS runtime
+WORKDIR /workspace
 COPY --from=builder /app/trivy-compromise-scanner /usr/local/bin/trivy-compromise-scanner
 ENTRYPOINT ["/usr/local/bin/trivy-compromise-scanner"]
